@@ -4,12 +4,12 @@ import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
 
 data class NovoTopicoForm(
-    @field:NotEmpty
+    @field:NotEmpty(message = "Titulo não pode ser em branco")
     val titulo: String,
-    @field:NotEmpty
+    @field:NotEmpty(message = "Mensagem não pode ser em branco")
     val mensagem: String,
-    @field:NotNull
+    @field:NotNull(message = "idCurso não pode ser nulo")
     val idCurso: Long,
-    @field:NotNull
+    @field:NotNull(message = "idAutor não pode ser nulo")
     val idAutor: Long
 )
